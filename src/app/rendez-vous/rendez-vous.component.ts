@@ -35,7 +35,7 @@ export class RendezVousComponent implements OnInit {
       firstName:['', Validators.required],
       lastName:['', Validators.required],
       phoneNumber:['', Validators.required],
-      date:['', Validators.required],
+      date:['', Validators.required]
       // time:['', Validators.required]
     });
   }
