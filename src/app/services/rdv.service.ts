@@ -23,7 +23,7 @@ export class RdvService {
   };
 
    getRdvs() {
-    return this.httpClient.get('ctbackend.herokuapp.com/api/rdvs/get-rdvs').subscribe(
+    return this.httpClient.get('ctbackend.herokuapp.com/api/rdvs/get-rdvs', {responseType: 'json'}).subscribe(
       (rdvs: Rdv[]) => {
         if (rdvs) {
           this.rdvs = rdvs;
