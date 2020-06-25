@@ -1,0 +1,41 @@
+h1{
+  text-align: center;
+  position: relative;
+  top: 25px;
+  color: rgb(99, 93, 93);
+  font-size: 45px;
+}
+hr{
+  position: relative;
+  top: 20px;
+}
+
+ nav {
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  position: relative;
+  top: 20px;
+  ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    li {
+      display: block;
+      font-family: "Fira Sans", sans-serif;
+      font-size: 17px;
+      line-height: 50px;
+      a {
+
+        color: #f2f2f2;
+        text-decoration: none;
+        padding: 14px;
+        &:hover {
+          background-color: rgb(114, 110, 110);
+          border-radius: 24px;
+        }
+      }
+    }
+  }
+}

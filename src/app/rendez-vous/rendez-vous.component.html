@@ -1,0 +1,77 @@
+<app-header></app-header>
+
+
+<div class="formulaire">
+    <h2>Prendre un rendez vous :</h2>
+
+    <form class="form" [formGroup]="rdvForm" (ngSubmit)="onSubmitForm()">
+
+      <div class="specialities">
+       <mat-form-field>
+        <mat-label>Choisissez une spécialité</mat-label>
+        <mat-select disableRipple formControlName="speciality">
+          <mat-option selected disabled>Choisissez une spécialité ici</mat-option>
+          <mat-option value="Médecine générale" >Médecine générale</mat-option>
+          <mat-option value="Gynecologie obstétricale">Gynécologie obstétricale</mat-option>
+          <mat-option value="Cardiologie">Cardiologie</mat-option>
+          <mat-option value="Radiologie">Radiologie</mat-option>
+          <mat-option value="Cancérologie">Cancérologie</mat-option>
+          <mat-option value="Chirurgie">Chirurgie</mat-option>
+          <mat-option value="Echographie">Echographie</mat-option>
+          <mat-option value="ORL">ORL</mat-option>
+          <mat-option value="Mammographie">Ophtalmologie</mat-option>
+          <mat-option value="Urologie">Urologie</mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+
+      <div class="prenom">
+          <input type="text" formControlName="firstName" placeholder="Prénom(s)">
+      </div>
+
+      <div class="nom">
+          <input type="text" formControlName="lastName" placeholder="Nom de famille">
+      </div>
+
+      <div class="num">
+            <mat-form-field class="example-full-width">
+            <mat-label>Numéro de téléphone</mat-label>
+            <span matPrefix>+221 &nbsp;</span>
+            <input type="tel" matInput placeholder="77 111 22 33" formControlName="phoneNumber">
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+      </div>
+
+      <!-- <div class="time">
+          <mat-form-field class="time">
+            <mat-label>Heure</mat-label>
+            <input type="time" matInput formControlName="time" >
+            <mat-icon matSuffix></mat-icon>
+          </mat-form-field>
+          <p>Veuiller choisir une heure en 9h et 18h</p>
+      </div> -->
+
+      <p>Choisissez la date souhaitee pour votre rendez vous</p>
+
+      <div class="date">
+          <mat-form-field class="date">
+            <mat-label>Choisissez la date souhaitee</mat-label>
+            <input id="date" matInput type="date" formControlName="date">
+          </mat-form-field>
+      </div>
+
+      <p>Veuillez entrer toutes les informations pour desactiver le button</p>
+
+      <div class="button">
+
+        <!-- <button type="submit" [disabled]="rdvForm.invalid">Envoyer les informations</button> -->
+
+        <input type="submit" value="Envoyer les informations" [disabled]="rdvForm.invalid">
+
+      </div>
+
+    </form>
+  </div>
+
+
+
