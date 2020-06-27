@@ -12,35 +12,46 @@ export class LocalisationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  title = 'angular-gmap';
+  title = 'Plateau Medical Taslima';
 
-    @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
-    //THIS IS WHERE I MANAGE POSITIONS
-    map: google.maps.Map;
-    lat = 14.6937;
-    lng = -17.44406;
-    // 14.6937, -17.44406
+  latitude = 14.747574;
+  longitude = -17.250341;
+  mapType = 'satellite';
 
-    coordinates = new google.maps.LatLng(this.lat, this.lng);
+    // @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
+    // //THIS IS WHERE I MANAGE POSITIONS
+    // map: google.maps.Map;
+    // lat = 14.6937;
+    // lng = -17.44406;
+    // // 14.6937, -17.44406
 
-    mapOptions: google.maps.MapOptions = {
-     center: this.coordinates,
-     zoom: 8
-    };
+    // coordinates = new google.maps.LatLng(this.lat, this.lng);
 
-    marker = new google.maps.Marker({
-      position: this.coordinates,
-      map: this.map,
-    });
+    // mapOptions: google.maps.MapOptions = {
+    //  center: this.coordinates,
+    //  zoom: 15
+    // };
 
-    ngAfterViewInit() {
-      this.mapInitializer();
-    }
+    // marker = new google.maps.Marker({
+    //   position: this.coordinates,
+    //   map: this.map,
+    //   title:'PLateau Medical Taslima'
+    // });
 
-    mapInitializer() {
-      this.map = new google.maps.Map(this.gmap.nativeElement,
-      this.mapOptions);
-      this.marker.setMap(this.map);
-    }
+    // ngAfterViewInit() {
+    //   this.mapInitializer();
+    // }
+
+    // mapInitializer() {
+    //   this.map = new google.maps.Map(this.gmap.nativeElement,
+    //   this.mapOptions);
+    //   this.marker.setMap(this.map);
+    // }
+
+
+
+
+// lat = 14.6937;
+    // lng = -17.44406;
 
 }
