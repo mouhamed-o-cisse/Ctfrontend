@@ -28,6 +28,7 @@ import { PatientsListComponent } from './patients-list/patients-list.component';
 import { LocalisationComponent } from './localisation/localisation.component';
 
 import {RdvService} from './services/rdv.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 const appRoutes : Routes =[
@@ -53,13 +54,16 @@ const appRoutes : Routes =[
     path:'rdv-liste', component: RdvListeComponent
   },
   {
-    path:'administration', component: AdministrationComponent
+    path:'admin2010sen', component: AdministrationComponent
   },
   {
     path:'patients-list', component: PatientsListComponent
   },
   {
     path:'localisation', component: LocalisationComponent
+  },
+  {
+    path:'footer', component: FooterComponent
   },
   ///////////////////////////////////////////////////////
   {
@@ -88,7 +92,8 @@ const appRoutes : Routes =[
     HeaderComponent,
     PatientsListComponent,
     LocalisationComponent,
-    RdvListeComponent
+    RdvListeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
