@@ -31,7 +31,95 @@ h1{
   top: 100px;
   .single-rdv{
     text-align: center;
-
-
   }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rdv-liste{
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    grid-row-gap: 20px;
+    //justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    .single-rdv{
+      text-align: center;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .rdv-liste{
+    width:90%;
+    display: grid;
+    grid-template-columns:  1fr ;
+    grid-row-gap: 20px;
+    //justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    .single-rdv{
+      text-align: center;
+    }
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .rdv-liste{
+    width:90%;
+    display: grid;
+    grid-template-columns:  1fr ;
+    grid-row-gap: 20px;
+    //justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    .single-rdv{
+      text-align: center;
+    }
+  }
+
+}
+
+@media (min-width: 1024px)  and (max-width:1280px){
+  .rdv-liste{
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-row-gap: 20px;
+    //justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    .single-rdv{
+      text-align: center;
+    }
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .rdv-liste{
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-row-gap: 20px;
+    //justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    .single-rdv{
+      text-align: center;
+    }
+  }
+
 }
