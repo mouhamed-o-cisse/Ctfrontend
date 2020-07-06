@@ -1,9 +1,17 @@
 <app-header></app-header>
 <!-- <div #mapContainer id="map"></div> -->
+<div class="position">
+  <a href="https://www.google.com/maps/dir//plateau+medical+taslima/@14.777243,-17.497216,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0xec1a1a59e0bc3bf:0xfba6e95bb687d20f!2m2!1d-17.2504354!2d14.7475118">
+  Cliquez ici pour avoir l'itinéraire du Plateau Médical Taslima depuis votre position</a>
+</div>
 <div class="map">
+
 <agm-map [latitude]='latitude' [longitude]='longitude' [zoom]="15">
-<agm-marker [latitude]='latitude' [longitude]='longitude' [title]='title'></agm-marker>
+
+  <agm-marker [latitude]='latitude' [longitude]='longitude' [title]='title'></agm-marker>
+
 </agm-map>
+
 </div>
 <!-- <agm-map [latitude]='latitude' [longitude]='longitude'
 [mapTypeId]='mapType'> -->

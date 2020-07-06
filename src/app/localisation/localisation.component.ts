@@ -12,11 +12,15 @@ export class LocalisationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  title = 'Plateau Medical Taslima';
+  title = "Plateau Medical Taslima" ;
 
   latitude = 14.747574;
   longitude = -17.250341;
   mapType = 'satellite';
+  // label: {
+  //   color: 'blue',
+  //   text: 'Marker label'
+  // }
 
     // @ViewChild('mapContainer', { static: false }) gmap: ElementRef;
     // //THIS IS WHERE I MANAGE POSITIONS
