@@ -45,12 +45,16 @@
       }
     }
   }
+  .mat-drawer-container{ overflow: visible; }
+  .mat-drawer-container{
+    position: unset!important;
+  }
 }
-// .mat-drawer-container{ overflow: visible; }
+
 
 .bheader{
   nav{
-    padding: 20px 10px 0 0 ;
+    padding: 20px 0 10px 0 ;
     overflow: hidden;
     top: 0;
     width: 100%;
