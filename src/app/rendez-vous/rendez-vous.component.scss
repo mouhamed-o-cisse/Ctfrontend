@@ -88,6 +88,13 @@
 
 }
 
+@media (min-width: 320px) and (max-width: 360px) {
+  .formulaire{
+    width: 80%;
+    top: 60%;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
 
   //CSS
