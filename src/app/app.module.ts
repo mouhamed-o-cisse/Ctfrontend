@@ -29,6 +29,12 @@ import { LocalisationComponent } from './localisation/localisation.component';
 
 import {RdvService} from './services/rdv.service';
 import { FooterComponent } from './footer/footer.component';
+import { NheaderComponent } from './nheader/nheader.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 const appRoutes : Routes =[
@@ -93,7 +99,8 @@ const appRoutes : Routes =[
     PatientsListComponent,
     LocalisationComponent,
     RdvListeComponent,
-    FooterComponent
+    FooterComponent,
+    NheaderComponent
   ],
   imports: [
     BrowserModule,
@@ -115,7 +122,12 @@ const appRoutes : Routes =[
       premium customer, in which case you can
       use clientId
       */
-    })
+    }),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [RdvService],
 
