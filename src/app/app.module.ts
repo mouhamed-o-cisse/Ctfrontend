@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -11,6 +11,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { AgmCoreModule } from '@agm/core';
+import { MustMatchDirective } from './helpers/must-match.directives'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,9 @@ import { HeaderComponent } from './header/header.component';
 import { PatientsListComponent } from './patients-list/patients-list.component';
 import { LocalisationComponent } from './localisation/localisation.component';
 
-import {RdvService} from './services/rdv.service';
+import { AuthService } from './services/auth.service'
+import { AuthGuardService } from './services/auth-guard.service'
+import { RdvService } from './services/rdv.service';
 import { FooterComponent } from './footer/footer.component';
 import { NheaderComponent } from './nheader/nheader.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -35,6 +38,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const appRoutes : Routes =[
@@ -58,6 +64,15 @@ const appRoutes : Routes =[
   },
   {
     path:'rdv-liste', component: RdvListeComponent
+  },
+  {
+    path:'login', component: LoginComponent
+  },
+  {
+    path:'signup', component: SignupComponent
+  },
+  {
+    path:'profile', component: ProfileComponent, canActivate:[AuthGuardService]
   },
   {
     path:'admin2010sen', component: AdministrationComponent
@@ -96,17 +111,23 @@ const appRoutes : Routes =[
     RdvListeComponent,
     AdministrationComponent,
     HeaderComponent,
+    FichierPatientComponent,
     PatientsListComponent,
     LocalisationComponent,
     RdvListeComponent,
+    MustMatchDirective,
     FooterComponent,
-    NheaderComponent
+    NheaderComponent,
+    LoginComponent,
+    SignupComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
@@ -129,7 +150,7 @@ const appRoutes : Routes =[
     MatSidenavModule,
     MatListModule
   ],
-  providers: [RdvService],
+  providers: [RdvService, AuthGuardService, AuthService],
 
   bootstrap: [AppComponent]
 })

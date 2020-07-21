@@ -1,0 +1,125 @@
+.whole{
+  h1{
+    text-align: center;
+    margin: 20px 0;
+  }
+  form{
+    .part_one{
+      width: 50%;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 16px;
+      padding: 20px;
+      h3{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .fl_name{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // .first_name{}
+        // .last_name{}
+        input[type = "text"]{
+          border: 0;
+          background: none;
+          display: block;
+          margin: 15px auto;
+          text-align: center;
+          border: 2px solid ;
+          border-color: rgb(228, 99, 99);
+          padding: 8px;
+          width: 200px;
+          outline: none;
+          color: rgb(126, 120, 120);
+          border-radius: 24px;
+          transition: 1s;
+          &:focus{
+            width: 250px;
+            // border-color: rgb(74, 61, 190);
+          }
+        }
+      }
+    }
+    .part_two{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      // margin: 10px auto;
+      .credentials{
+        text-align: center;
+        width: 80%;
+        background-color: white;
+        border-radius: 16px;
+        margin: 10px auto;
+        padding: 20px;
+      }
+      .informations{
+        text-align: center;
+        width: 80%;
+        background-color: white;
+        border-radius: 16px;
+        margin: 10px auto;
+        padding: 20px;
+      }
+      h3{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      input[type = "text"]{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+        border: 2px solid ;
+        border-color: rgb(228, 99, 99);
+        padding: 8px;
+        width: 200px;
+        outline: none;
+        color: rgb(126, 120, 120);
+        border-radius: 24px;
+        transition: 1s;
+        &:focus{
+          width: 250px;
+          // border-color: rgb(74, 61, 190);
+        }
+      }
+      input[type = "password"]{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+        border: 2px solid ;
+        border-color: rgb(228, 99, 99);
+        padding: 8px;
+        width: 200px;
+        outline: none;
+        color: rgb(126, 120, 120);
+        border-radius: 24px;
+        transition: 1s;
+        &:focus{
+          width: 250px;
+          // border-color: rgb(60, 50, 150);
+        }
+      }
+    }
+    button{
+      // input[type = "submit"]{
+        border: 0;
+        background-color: white;
+        display: block;
+        margin: 15px auto;
+        text-align: center;
+        border: 2px solid ;
+        border-color: rgb(228, 99, 99);
+        padding: 8px;
+        width: 200px;
+        outline: none;
+        color: rgb(126, 120, 120);
+        border-radius: 24px;
+        transition: 1s;
+    }
+  }
+}

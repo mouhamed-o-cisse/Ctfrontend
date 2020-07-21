@@ -1,0 +1,29 @@
+<app-nheader></app-nheader>
+
+    <div class="formulaire">
+      <form  (ngSubmit)="f.form.valid && login() " #f="ngForm" novalidate>
+        <h2>Se connecter</h2>
+        <div class="credential">
+          <!-- <label for="email">Email address</label> -->
+          <input type="email" class="" name="email" placeholder="Email"
+          [(ngModel)]="credentials.email" #email="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required />
+
+          <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+            <div *ngIf="email.errors.required">L'adresse mail est requise</div>
+        </div>
+        </div>
+        <div class="credential">
+          <!-- <label for="password">Password</label> -->
+          <input type="password" class="" name="password" placeholder="Mot de passe"
+          [(ngModel)]="credentials.password" #password="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required />
+          <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+            <div *ngIf="password.errors.required">Le mot de passe est requis</div>
+          </div>
+        </div>
+
+        <button type="submit" class="">Se connecter</button>
+      </form>
+    </div>
+
