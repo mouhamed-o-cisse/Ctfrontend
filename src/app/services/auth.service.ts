@@ -76,11 +76,11 @@ export class AuthService {
   }
 
   public register(user: TokenPayload): Observable<any> {
-    return this.http.post('http://localhost:1200/users/register', user)
+    return this.http.post('https://ctbackend2.herokuapp.com/users/register', user)
   }
 
   public login(user: TokenPayload): Observable<any> {
-    const base = this.http.post('http://localhost:1200/users/login', user)
+    const base = this.http.post('https://ctbackend2.herokuapp.com/users/login', user)
 
     const request = base.pipe(
       map((data: TokenResponse) => {
@@ -94,7 +94,7 @@ export class AuthService {
   }
 
   public profile(): Observable<any> {
-    return this.http.get('http://localhost:1200/users/profile', {
+    return this.http.get('https://ctbackend2.herokuapp.com/users/profile', {
       headers: { Authorization: `${this.getToken()}` }
     })
   }

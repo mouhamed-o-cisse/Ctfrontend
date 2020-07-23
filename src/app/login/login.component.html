@@ -10,7 +10,7 @@
           [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required />
 
           <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
-            <div *ngIf="email.errors.required">L'adresse mail est requise</div>
+            <div *ngIf="email.errors.required">L' adresse mail est requise</div>
         </div>
         </div>
         <div class="credential">
@@ -22,6 +22,8 @@
             <div *ngIf="password.errors.required">Le mot de passe est requis</div>
           </div>
         </div>
+
+        <p>Assurez vous de mettre le bon mail et le bon mot de passe</p>
 
         <button type="submit" class="">Se connecter</button>
       </form>

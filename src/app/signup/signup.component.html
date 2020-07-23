@@ -1,47 +1,43 @@
 <app-nheader></app-nheader>
 
 <div class="whole">
-    <h1>Creez votre fichier patient en 2 etapes simples</h1>
+    <h1>Créez votre fichier patient en 2 étapes simples</h1>
 
     <form name="form" (ngSubmit)="f.form.valid && register() " #f="ngForm"
               [mustMatch]="['password', 'confirmPassword']" novalidate>
-
-      <div class="part_one">
-        <h3>Etape 1</h3>
-
-        <div class="fl_name">
-          <div class="first_name">
-              <!-- <label for="firstName">First Name</label> -->
-              <input type="text" class="" name="firstName" placeholder="Prenom(s)"
-              [(ngModel)]=" credentials.first_name"
-              #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
-              <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
-                  <div *ngIf="firstName.errors.required">Le prenom est requis</div>
-              </div>
-          </div>
-          <div class="last_name">
-              <!-- <label for="lastName">Last Name</label> -->
-              <input type="text" class="" name="lastName" [(ngModel)]=" credentials.last_name" placeholder="Nom de famille"
-               #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
-              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
-                  <div *ngIf="lastName.errors.required">Le nom est requis</div>
-              </div>
-          </div>
-      </div>
-      </div>
 
 
         <div class="part_two">
 
           <div class="credentials">
-            <h3>Etape 2 </h3>
+            <h3>Etape 1 </h3>
+
+            <div class="first_name">
+              <input type="text" class="" name="firstName" placeholder="Prénom(s)"
+              [(ngModel)]=" credentials.first_name"
+              #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
+              required />
+              <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                  <div *ngIf="firstName.errors.required">Le prénom est requis</div>
+              </div>
+            </div>
+
+            <div class="last_name">
+              <input type="text" class="" name="lastName" [(ngModel)]=" credentials.last_name" placeholder="Nom de famille"
+               #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+              <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                  <div *ngIf="lastName.errors.required">Le nom est requis</div>
+              </div>
+            </div>
+
             <div class="credential">
                 <!-- <label for="email">Email</label> -->
-                <input type="text" class=" " name="email" [(ngModel)]=" credentials.email" placeholder="Email"
+                <input type="text" class=" " name="email" [(ngModel)]=" credentials.email"
+                placeholder="Email"
                 #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
                 <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
                     <div *ngIf="email.errors.required">Le Email est requis</div>
-                    <div *ngIf="email.errors.email">Veuiller mettre une addresse mail valide</div>
+                    <div *ngIf="email.errors.email">Veuillez mettre une adresse mail valide</div>
                 </div>
             </div>
 
@@ -52,7 +48,7 @@
                 required minlength="6" placeholder="Mot de passe" />
                 <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
                     <div *ngIf="password.errors.required">Le mot de passe est requis</div>
-                    <div *ngIf="password.errors.minlength">Le mot de passe doit avoir au moins 6 characteres</div>
+                    <div *ngIf="password.errors.minlength">Le mot de passe doit avoir au moins 6 charactères</div>
                 </div>
             </div>
 
@@ -61,25 +57,25 @@
                 <input type="password" class="" name="confirmPassword"
                 [(ngModel)]="model.confirmPassword" #confirmPassword="ngModel"
                  [ngClass]="{ 'is-invalid': f.submitted && confirmPassword.invalid }" required
-                 placeholder="Confirmation du mot de passe"/>
+                 placeholder="Confirmez votre mot de passe "/>
                 <div *ngIf="f.submitted && confirmPassword.invalid" class="invalid-feedback">
                     <div *ngIf="confirmPassword.errors.required">La confirmation du mot de passe est requise</div>
-                    <div *ngIf="confirmPassword.errors.mustMatch">Les deux mots de passe doivent etre identiques</div>
+                    <div *ngIf="confirmPassword.errors.mustMatch">Les deux mots de passe doivent être identiques</div>
                 </div>
             </div>
           </div>
 
           <div class="informations">
 
-            <h3>Etape 3 </h3>
+            <h3>Etape 2 </h3>
 
             <div class="information">
               <!-- <label for="phone_number">Phone Number</label> -->
               <input type="text" class="" name="phone_number" [(ngModel)]=" credentials.phone_number"
                #phone_number="ngModel" [ngClass]="{ 'is-invalid': f.submitted && phone_number.invalid }" required
-               placeholder="Numero de telephone" />
+               placeholder="Numéro de téléphone" />
               <div *ngIf="f.submitted && phone_number.invalid" class="invalid-feedback">
-                  <div *ngIf="phone_number.errors.required">Le numero de telephone est requis</div>
+                  <div *ngIf="phone_number.errors.required">Le numéro de téléphone est requis</div>
               </div>
             </div>
 
@@ -87,13 +83,14 @@
               <!-- <label for="age">Age</label> -->
               <input type="text" class="" name="age" [(ngModel)]=" credentials.age"
                #age="ngModel" [ngClass]="{ 'is-invalid': f.submitted && age.invalid }" required
-               placeholder="Age"/>
+               placeholder="Votre âge"/>
               <div *ngIf="f.submitted && age.invalid" class="invalid-feedback">
-                  <div *ngIf="age.errors.required">L'age est requis</div>
+                  <div *ngIf="age.errors.required">L'âge est requis</div>
               </div>
             </div>
 
             <div class="information">
+              <p>Avez vous une (des) maladie(s) particulière(s) ?</p>
               <!-- <label for="pdesease">P desease</label> -->
               <input type="text" class="" name="pdesease" [(ngModel)]=" credentials.pdesease"
                #pdesease="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pdesease.invalid }"
@@ -104,6 +101,7 @@
             </div>
 
             <div class="information">
+              <p> Etes vous allergique à quelque chose ?</p>
               <!-- <label for="allergy">Allergy</label> -->
               <input type="text" class="" name="allergy" [(ngModel)]=" credentials.allergy"
                #allergy="ngModel" [ngClass]="{ 'is-invalid': f.submitted && allergy.invalid }"
@@ -121,7 +119,6 @@
               <button class="">Enregistrer</button>
               <!-- <input type="submit" value="Soumettre"> -->
             </div>
-
 
     </form>
 

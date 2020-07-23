@@ -16,8 +16,22 @@
         <mat-icon aria-label="Side nav toggle icon" >clear</mat-icon>
       </button>
     </div>
+
+
     <!-- <mat-toolbar style="background-color: rgb(155, 108, 108);">Menu</mat-toolbar> -->
       <mat-nav-list class="nav-list">
+        <div *ngIf="!auth.isLoggedIn()" class="login">
+          <a mat-list-item routerLink="../login">Se connecter</a>
+          <hr>
+        </div>
+        <div *ngIf="auth.isLoggedIn()" class="profile">
+          <a mat-list-item routerLink="../profile">{{ auth.getUserDetails()?.first_name }}</a>
+          <hr>
+        </div>
+        <div  *ngIf="auth.isLoggedIn()" class="logout">
+          <a mat-list-item routerLink="" (click)="auth.logout()">Se deconnecter</a>
+          <hr>
+        </div>
         <a mat-list-item routerLink=''>ACCUEIL</a>
         <hr>
         <a mat-list-item routerLink='../nos-soins'>SOINS</a>
@@ -42,6 +56,12 @@
         <span style="margin: 0 auto; font-size: 12px;"><a routerLink=''
           style="text-decoration: none; color: black;">
           Plateau Médical Taslima</a></span>
+          <!-- <span>
+            <a routerLink=''
+          style="text-decoration: none; color: black;">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </a>
+          </span> -->
         <!-- <span>Menu</span> -->
 
       </mat-toolbar>
@@ -65,7 +85,7 @@
         <a class="nav-link" routerLink="../login">Se connecter</a>
       </li>
       <li *ngIf="!auth.isLoggedIn()" class="nav-item">
-        <a class="nav-link" routerLink="../signup">Creer son fichier patient</a>
+        <a class="nav-link" routerLink="../signup">Créer son fichier patient</a>
       </li>
        <li *ngIf="auth.isLoggedIn()" class="nav-item">
         <a class="nav-link" routerLink="../profile">{{ auth.getUserDetails()?.first_name }}</a>
