@@ -10,6 +10,8 @@ import { Router } from '@angular/router'
 })
 export class SignupComponent implements OnInit {
 
+  isLoading = false;
+
   model: any = {};
 
   credentials: TokenPayload = {
@@ -37,6 +39,7 @@ export class SignupComponent implements OnInit {
         console.error(err);
       }
     );
+    this.isLoading = true;
   }
 
   ngOnInit(): void {

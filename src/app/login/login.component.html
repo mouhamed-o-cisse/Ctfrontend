@@ -1,5 +1,5 @@
 <app-nheader></app-nheader>
-
+<mat-progress-spinner></mat-progress-spinner>
     <div class="formulaire">
       <form  (ngSubmit)="f.form.valid && login() " #f="ngForm" novalidate>
         <h2>Se connecter</h2>
@@ -25,7 +25,19 @@
 
         <p>Assurez vous de mettre le bon mail et le bon mot de passe</p>
 
-        <button type="submit" class="">Se connecter</button>
+        <div class="button" *ngIf="!isLoading">
+          <button type="submit">Se connecter</button>
+        </div>
+
+        <div class="" *ngIf="isLoading" >
+          <mat-spinner color="warn" diameter="27" class="spinner"></mat-spinner>
+        </div>
+
+        <div class="signup">
+          <h5>Si vous n'avez pas de compte, <br><span><a routerLink="/signup">
+        Créez votre compte ici</a></span></h5>
+        </div>
+
       </form>
     </div>
 

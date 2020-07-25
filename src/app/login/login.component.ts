@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService, TokenPayload} from '../services/auth.service'
 import { Router } from '@angular/router'
+import {ThemePalette} from '@angular/material/core';
+import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +11,7 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent implements OnInit {
 
+  isLoading = false;
 
   credentials: TokenPayload = {
     id: 0,
@@ -33,6 +36,7 @@ export class LoginComponent implements OnInit {
         console.error(err)
       }
     )
+    this.isLoading = true;
   }
 
   ngOnInit(): void {

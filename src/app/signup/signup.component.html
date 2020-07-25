@@ -115,9 +115,12 @@
 
         </div>
 
-            <div class="button">
+            <div class="button" *ngIf="!isLoading">
               <button class="">Enregistrer</button>
-              <!-- <input type="submit" value="Soumettre"> -->
+            </div>
+
+            <div class="" *ngIf="isLoading" >
+              <mat-spinner color="warn" diameter="27" class="spinner"></mat-spinner>
             </div>
 
     </form>

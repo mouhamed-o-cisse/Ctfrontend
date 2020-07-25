@@ -11,7 +11,11 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { AgmCoreModule } from '@agm/core';
-import { MustMatchDirective } from './helpers/must-match.directives'
+import { MustMatchDirective } from './helpers/must-match.directives';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -133,7 +137,10 @@ const appRoutes : Routes =[
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
+    MatRadioModule,
     MatNativeDateModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
     MatIconModule,
     MatExpansionModule,
     AgmCoreModule.forRoot({
