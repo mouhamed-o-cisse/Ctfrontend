@@ -19,6 +19,14 @@ export interface UserDetails {
   iat: number
 }
 
+// export interface AdminDetails {
+//   id: number
+//   username: string
+//   password: string
+//   exp: number
+//   iat: number
+// }
+
 interface TokenResponse {
   token: string
 }
@@ -33,6 +41,13 @@ export interface TokenPayload {
   age: string
   pdesease: string
   allergy: string
+}
+
+export interface Admin {
+  id: number
+  username: string
+  password: string
+
 }
 
 @Injectable()
@@ -66,6 +81,18 @@ export class AuthService {
     }
   }
 
+  // public getAdminDetails(): AdminDetails {
+  //   const token = this.getToken()
+  //   let payload
+  //   if (token) {
+  //     payload = token.split('.')[1]
+  //     payload = window.atob(payload)
+  //     return JSON.parse(payload)
+  //   } else {
+  //     return null
+  //   }
+  // }
+
   public isLoggedIn(): boolean {
     const user = this.getUserDetails()
     if (user) {
@@ -75,12 +102,35 @@ export class AuthService {
     }
   }
 
+  // public adminLoggedIn(): boolean {
+  //   const admin = this.getAdminDetails()
+  //   if (admin) {
+  //     return admin.exp > Date.now() / 1000
+  //   } else {
+  //     return false
+  //   }
+  // }
+
   public register(user: TokenPayload): Observable<any> {
     return this.http.post('https://ctbackend2.herokuapp.com/users/register', user)
   }
 
   public login(user: TokenPayload): Observable<any> {
     const base = this.http.post('https://ctbackend2.herokuapp.com/users/login', user)
+
+    const request = base.pipe(
+      map((data: TokenResponse) => {
+        if (data.token) {
+          this.saveToken(data.token)
+        }
+        return data
+      })
+    )
+    return request
+  }
+
+  public adminlogin(admin: Admin): Observable<any> {
+    const base = this.http.post('https://ctbackend2.herokuapp.com/admin/login', admin)
 
     const request = base.pipe(
       map((data: TokenResponse) => {

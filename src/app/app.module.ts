@@ -45,6 +45,7 @@ import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 const appRoutes : Routes =[
@@ -79,7 +80,11 @@ const appRoutes : Routes =[
     path:'profile', component: ProfileComponent, canActivate:[AuthGuardService]
   },
   {
-    path:'admin2010sen', component: AdministrationComponent
+    path:'a', component: AdminloginComponent
+  },
+  {
+    path:'a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1', component: AdministrationComponent
+    // , canActivateChild:[AuthGuardService]
   },
   {
     path:'patients-list', component: PatientsListComponent
@@ -124,7 +129,8 @@ const appRoutes : Routes =[
     NheaderComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,
