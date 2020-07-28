@@ -6,6 +6,5 @@ export class Rdv {
     public lastName: string,
     public phoneNumber: string,
     public date: string
-    // public time: string
   ) {}
 }

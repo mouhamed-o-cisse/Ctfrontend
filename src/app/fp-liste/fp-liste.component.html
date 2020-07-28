@@ -3,21 +3,22 @@
     Retour à l'administration</a>
 </div>
 
-<h1>Liste des rendez vous</h1>
+<h1>Liste des fichiers patients</h1>
 
-<div class="rdv-liste">
+<div class="patient-liste">
 
-  <div class="single-rdv" *ngFor="let rdv of rdvs">
+  <div class="single-patient" *ngFor="let patient of patients">
 
-    <h2> {{rdv.firstName}}  {{rdv.lastName}} </h2>
+    <h2> {{patient.first_name}}  {{patient.last_name}} </h2>
 
-    <p>a pris un rendez vous en </p>
+    <h2> {{patient.email}}  {{patient.allergy}} </h2>
 
-    <h3> {{rdv.speciality}} </h3>
 
-    <p>pour le {{rdv.date}} </p>
+    <h3> {{patient.age}} </h3>
 
-    <p> Son numéro de téléphone est : {{rdv.phoneNumber}} </p>
+    <p> {{patient.pdesease}} </p>
+
+    <p> Son numéro de téléphone est : {{patient.phone_number}} </p>
 
     <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Rendez vous confirmé</label> -->
@@ -25,6 +26,7 @@
   </div>
 
 </div>
+
 
 
 

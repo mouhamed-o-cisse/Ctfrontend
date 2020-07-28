@@ -38,14 +38,14 @@ export class AdminloginComponent implements OnInit {
               () => {
                   this.isLoading = false;
                   resolve(true);
-              }, 3000
+              }, 10000
             );
 
           setTimeout(
             () => {
                 this.invalid = true;
                 resolve(true);
-            }, 3000
+            }, 10000
           );
 
       }

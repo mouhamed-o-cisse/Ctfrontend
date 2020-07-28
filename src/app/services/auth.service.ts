@@ -19,14 +19,6 @@ export interface UserDetails {
   iat: number
 }
 
-// export interface AdminDetails {
-//   id: number
-//   username: string
-//   password: string
-//   exp: number
-//   iat: number
-// }
-
 interface TokenResponse {
   token: string
 }
@@ -81,18 +73,6 @@ export class AuthService {
     }
   }
 
-  // public getAdminDetails(): AdminDetails {
-  //   const token = this.getToken()
-  //   let payload
-  //   if (token) {
-  //     payload = token.split('.')[1]
-  //     payload = window.atob(payload)
-  //     return JSON.parse(payload)
-  //   } else {
-  //     return null
-  //   }
-  // }
-
   public isLoggedIn(): boolean {
     const user = this.getUserDetails()
     if (user) {
@@ -102,14 +82,6 @@ export class AuthService {
     }
   }
 
-  // public adminLoggedIn(): boolean {
-  //   const admin = this.getAdminDetails()
-  //   if (admin) {
-  //     return admin.exp > Date.now() / 1000
-  //   } else {
-  //     return false
-  //   }
-  // }
 
   public register(user: TokenPayload): Observable<any> {
     return this.http.post('https://ctbackend2.herokuapp.com/users/register', user)

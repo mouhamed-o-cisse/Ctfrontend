@@ -3,13 +3,13 @@ import { Patient } from '../models/patient-model';
 import { Subscription } from 'rxjs/Subscription';
 import { AdminService } from '../services/admin.service';
 
-
 @Component({
-  selector: 'app-patients-list',
-  templateUrl: './patients-list.component.html',
-  styleUrls: ['./patients-list.component.scss']
+  selector: 'app-fp-liste',
+  templateUrl: './fp-liste.component.html',
+  styleUrls: ['./fp-liste.component.scss']
 })
-export class PatientsListComponent implements OnInit {
+export class FpListeComponent implements OnInit {
+
 
   patients: Patient[];
 

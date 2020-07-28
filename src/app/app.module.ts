@@ -35,6 +35,7 @@ import { LocalisationComponent } from './localisation/localisation.component';
 import { AuthService } from './services/auth.service'
 import { AuthGuardService } from './services/auth-guard.service'
 import { RdvService } from './services/rdv.service';
+import { AdminService } from './services/admin.service';
 import { FooterComponent } from './footer/footer.component';
 import { NheaderComponent } from './nheader/nheader.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -46,6 +47,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { FpListeComponent } from './fp-liste/fp-liste.component';
 
 
 const appRoutes : Routes =[
@@ -90,6 +92,9 @@ const appRoutes : Routes =[
     path:'patients-list', component: PatientsListComponent
   },
   {
+    path:'f-patients', component: FpListeComponent
+  },
+  {
     path:'localisation', component: LocalisationComponent
   },
   {
@@ -130,7 +135,8 @@ const appRoutes : Routes =[
     LoginComponent,
     SignupComponent,
     ProfileComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    FpListeComponent
   ],
   imports: [
     BrowserModule,
@@ -163,7 +169,7 @@ const appRoutes : Routes =[
     MatSidenavModule,
     MatListModule
   ],
-  providers: [RdvService, AuthGuardService, AuthService],
+  providers: [RdvService, AuthGuardService, AuthService, AdminService],
 
   bootstrap: [AppComponent]
 })
