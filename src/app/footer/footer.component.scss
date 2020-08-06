@@ -4,6 +4,8 @@
   margin-top: 50px;
   padding: 25px;
   padding-bottom: 10px;
+  position: relative;
+  // bottom: ;
   h1{
    text-align: center;
   }
@@ -28,7 +30,35 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+  .footer{
+    width: 100%;
+    background-color: rgb(201, 152, 152);
+    margin-top: 50px;
+    padding: 25px;
+    padding-bottom: 10px;
+    position: relative;
+    top: 175px;
+    // bottom: 0;
+    h1{
+     text-align: center;
+    }
+    h3{
+     text-align: end;
+     margin-right: 20px;
+    //  line-height: ;
+    text-align: center;
+    a{
+      // text-decoration: none;
+      color: white;
+    }
+    }
+    h2{
+     text-align: center;
+    }
+    p{
+     text-align: left;
+    }
+  }
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -43,6 +73,7 @@
   h2{
     font-size: 14px;
   }
+
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {

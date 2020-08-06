@@ -1,23 +1,22 @@
-<div class="admin-link">
-  <a routerLink='../a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1'>
-    Retour à l'administration</a>
+<app-aheader></app-aheader>
+
+<div class="container">
+  <h2>Liste des patients <small>Total : {{nombreTotal}}</small></h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Nom</div>
+      <div class="col col-2">Prenom</div>
+      <div class="col col-3">Email</div>
+      <div class="col col-4">Numero de telephone</div>
+      <div class="col col-5">Details</div>
+    </li>
+    <li class="table-row" *ngFor="let patient of patients">
+      <div class="col col-1" data-label="Nom"> {{patient.last_name}}</div>
+      <div class="col col-2" data-label="Prenom">{{patient.first_name}} </div>
+      <div class="col col-3" data-label="Email"> {{patient.email}}</div>
+      <div class="col col-4" data-label="Numero de telephone">{{patient.phone_number}}</div>
+      <div class="col" id="link" data-label="Details"><a [routerLink]="['user-details/', patient.id]">Details du patient </a></div>
+    </li>
+
+  </ul>
 </div>
-
-<h1>Liste des patients</h1>
-
-<div class="patient-liste">
-
-  <div class="single-patient" *ngFor="let patient of patients">
-
-    <h2> {{patient.first_name}}  {{patient.last_name}} </h2>
-
-    <h2> {{patient.email}} {{patient.pdesease}}  </h2>
-
-    <p> Son numéro de téléphone est : {{patient.phone_number}} </p>
-
-  </div>
-
-</div>
-
-
-

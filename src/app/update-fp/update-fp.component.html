@@ -1,0 +1,207 @@
+<app-aheader></app-aheader>
+
+<div class="whole">
+    <h1>Mettre a jour un fichier patient</h1>
+
+    <form name="form" (ngSubmit)="f.form.valid && submit() " #f="ngForm" novalidate>
+
+            <div class="information" >
+                <input type="email" class="" name="email" [(ngModel)]=" informations.email"
+                placeholder="Email du patient"
+                #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+                <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                    <div *ngIf="email.errors.required" style="color: red; text-align: center;">
+                      Le Email est requis</div>
+                    <div *ngIf="email.errors.email" style="color: red; text-align: center;">
+                      Veuillez mettre une adresse mail valide</div>
+                </div>
+                <p style="color: red; text-align: center;">Assurez vous de mettre le bon email</p>
+            </div>
+
+            <!-- <div class="information">
+              <h4>Antecedents personnels</h4>
+              <input type="text" class="" name="antecedents_personnels" [(ngModel)]="informations.antecedents_personnels"
+               #antecedents_personnels="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&
+                antecedents_personnels.invalid }"  placeholder="Antecedents personnels"/> -->
+              <!-- <div *ngIf="f.submitted && antecedents_personnels.invalid" class="invalid-feedback">
+                  <div *ngIf="antecedents_personnels.errors.required">Requis</div>
+              </div> -->
+            <!-- </div> -->
+
+            <div class="form-group green-border-focus">
+              <!-- <label for="exampleFormControlTextarea5">Colorful border on :focus state</label> -->
+              <h3>Antecedents personnels</h3>
+              <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"
+               name="antecedents_personnels" [(ngModel)]="informations.antecedents_personnels"
+               #antecedents_personnels="ngModel" [ngClass]="{ 'is-invalid': f.submitted &&
+                antecedents_personnels.invalid }"  placeholder="Antecedents personnels">
+            </textarea>
+              <!-- <div *ngIf="f.submitted && antecedents_personnels.invalid" class="invalid-feedback">
+                  <div *ngIf="antecedents_personnels.errors.required">Requis</div>
+              </div> -->
+            </div>
+
+            <!-- <div class="information">
+              <p>Antecedents familiaux</p>
+              <input type="text" class="" name="antecedents_familiaux" [(ngModel)]="informations.antecedents_familiaux"
+               #antecedents_familiaux="ngModel" [ngClass]="{ 'is-invalid': f.submitted && antecedents_familiaux.invalid }"
+               placeholder="Antecedents familiaux"/> -->
+              <!-- <div *ngIf="f.submitted && antecedents_familiaux.invalid" class="invalid-feedback">
+                  <div *ngIf="antecedents_familiaux.errors.required">Requis</div>
+              </div> -->
+            <!-- </div> -->
+
+            <div class="form-group green-border-focus">
+              <h3>Antecedents familiaux</h3>
+              <!-- <label for="exampleFormControlTextarea5">Colorful border on :focus state</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"
+              name="antecedents_familiaux" [(ngModel)]="informations.antecedents_familiaux"
+               #antecedents_familiaux="ngModel" [ngClass]="{ 'is-invalid': f.submitted && antecedents_familiaux.invalid }"
+               placeholder="Antecedents familiaux"></textarea>
+            </div>
+
+            <div class="information">
+              <h3>Motif de consultation</h3>
+              <input type="text" class="" name="motif_de_consultation" [(ngModel)]="informations.motif_de_consultation"
+               #motif_de_consultation="ngModel" [ngClass]="{ 'is-invalid': f.submitted && motif_de_consultation.invalid }"
+               placeholder="Motif de consultation"/>
+              <!-- <div *ngIf="f.submitted && motif_de_consultation.invalid" class="invalid-feedback">
+                  <div *ngIf="motif_de_consultation.errors.required"Requis</div>
+              </div> -->
+            </div>
+
+
+            <!-- <div class="information">
+              <p>Bilan</p>
+              <input type="text" class="" name="bilan" [(ngModel)]="informations.bilan"
+               #bilan="ngModel" [ngClass]="{ 'is-invalid': f.submitted && bilan.invalid }"
+               placeholder="Bilan"/> -->
+              <!-- <div *ngIf="f.submitted && bilan.invalid" class="invalid-feedback">
+                  <div *ngIf="bilan.errors.required">Requis</div>
+              </div> -->
+            <!-- </div> -->
+
+            <div class="form-group green-border-focus">
+              <h3>Bilan</h3>
+              <!-- <label for="exampleFormControlTextarea5">Colorful border on :focus state</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"
+              name="bilan" [(ngModel)]="informations.bilan"
+               #bilan="ngModel" [ngClass]="{ 'is-invalid': f.submitted && bilan.invalid }"
+               placeholder="Bilan"></textarea>
+            </div>
+
+
+            <!-- <div class="information">
+              <p>Diagnostic</p>
+              <input type="text" class="" name="diagnostic" [(ngModel)]="informations.diagnostic"
+               #diagnostic="ngModel" [ngClass]="{ 'is-invalid': f.submitted && diagnostic.invalid }"
+               placeholder="Diagnostic"/> -->
+              <!-- <div *ngIf="f.submitted && diagnostic.invalid" class="invalid-feedback">
+                  <div *ngIf="diagnostic.errors.required">Requis</div>
+              </div> -->
+            <!-- </div> -->
+
+            <div class="form-group green-border-focus">
+              <h3>Diagnostic</h3>
+              <!-- <label for="exampleFormControlTextarea5">Colorful border on :focus state</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"
+              name="diagnostic" [(ngModel)]="informations.diagnostic"
+               #diagnostic="ngModel" [ngClass]="{ 'is-invalid': f.submitted && diagnostic.invalid }"
+               placeholder="Diagnostic"></textarea>
+            </div>
+
+            <!-- <div class="information">
+              <p>Traitement recu</p>
+              <input type="text" class="" name="traitement_recu" [(ngModel)]="informations.traitement_recu"
+               #traitement_recu="ngModel" [ngClass]="{ 'is-invalid': f.submitted && traitement_recu.invalid }"
+               placeholder="Traitement recu"/> -->
+              <!-- <div *ngIf="f.submitted && traitement_recu.invalid" class="invalid-feedback">
+                  <div *ngIf="traitement_recu.errors.required">Requis</div>
+              </div> -->
+            <!-- </div> -->
+
+            <div class="form-group green-border-focus">
+              <h3>Traitement recu</h3>
+              <!-- <label for="exampleFormControlTextarea5">Colorful border on :focus state</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"
+              name="traitement_recu" [(ngModel)]="informations.traitement_recu"
+               #traitement_recu="ngModel" [ngClass]="{ 'is-invalid': f.submitted && traitement_recu.invalid }"
+               placeholder="Traitement recu"></textarea>
+            </div>
+
+            <!-- <div class="information">
+              <p>Ordonnance</p>
+              <input type="text" class="" name="ordonnance" [(ngModel)]="informations.ordonnance"
+               #ordonnance="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ordonnance.invalid }"
+               placeholder="Ordonnance"/> -->
+              <!-- <div *ngIf="f.submitted && ordonnance.invalid" class="invalid-feedback">
+                  <div *ngIf="ordonnance.errors.required">Requis</div>
+              </div> -->
+            <!-- </div> -->
+
+            <div class="form-group green-border-focus">
+              <h3>Ordonnance</h3>
+              <!-- <label for="exampleFormControlTextarea5">Colorful border on :focus state</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea5" rows="2"
+              name="ordonnance" [(ngModel)]="informations.ordonnance"
+               #ordonnance="ngModel" [ngClass]="{ 'is-invalid': f.submitted && ordonnance.invalid }"
+               placeholder="Ordonnance"></textarea>
+            </div>
+
+            <!-- <div class="information">
+              <p>Evolution</p>
+              <input type="text" class="" name="evolution" [(ngModel)]="informations.evolution"
+               #evolution="ngModel" [ngClass]="{ 'is-invalid': f.submitted && evolution.invalid }"
+               placeholder="Evolution"/> -->
+              <!-- <div *ngIf="f.submitted && evolution.invalid" class="invalid-feedback">
+                  <div *ngIf="evolution.errors.required">Requis</div>
+              </div> -->
+            <!-- </div> -->
+
+            <div class="form-group green-border-focus">
+              <h3>Evolution</h3>
+              <!-- <label for="exampleFormControlTextarea5">Colorful border on :focus state</label> -->
+              <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"
+              name="evolution" [(ngModel)]="informations.evolution"
+               #evolution="ngModel" [ngClass]="{ 'is-invalid': f.submitted && evolution.invalid }"
+               placeholder="Evolution"></textarea>
+               <!-- <div *ngIf="f.submitted && evolution.invalid" class="invalid-feedback">
+                  <div *ngIf="evolution.errors.required">Requis</div>
+                </div> -->
+            </div>
+
+            <div class="information">
+              <h3>Prochain rendez vous</h3>
+              <!-- <label for="pdesease">P desease</label> -->
+              <input type="text" class="" name="pro_rdv" [(ngModel)]="informations.pro_rdv"
+               #pro_rdv="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pro_rdv.invalid }"
+               placeholder="Prochain rendez vous"/>
+              <!-- <div *ngIf="f.submitted && pro_rdv.invalid" class="invalid-feedback">
+                  <div *ngIf="pro_rdv.errors.required">Requis</div>
+              </div> -->
+            </div>
+
+            <div class="invalid" *ngIf="invalid">
+              <h5>Email ou mot de passe incorrect</h5>
+            </div>
+
+            <div class="button" *ngIf="!isLoading">
+              <button class="">Mettre a jour</button>
+            </div>
+
+            <div class="" *ngIf="isLoading" >
+              <p>Veuillez patienter quelques secondes</p>
+              <mat-spinner color="warn" diameter="27" class="spinner"></mat-spinner>
+            </div>
+
+            <!-- <div class="required"></div>
+            <div *ngIf="f.submitted && invalid" class="invalid-feedback">
+              <div *ngIf="email.errors.required">Des informations requise manquent</div>
+          </div> -->
+
+    </form>
+
+</div>
+
+
+

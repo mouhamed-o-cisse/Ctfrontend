@@ -1,0 +1,94 @@
+<div class="sheader">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+        #drawer class="sidenav"
+        fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <div class="clear-button" >
+        <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon" >clear</mat-icon>
+      </button>
+    </div>
+
+    <!-- <mat-toolbar style="background-color: rgb(155, 108, 108);">Menu</mat-toolbar> -->
+      <mat-nav-list class="nav-list">
+        <a mat-list-item routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1'>
+          Tableau de bord</a>
+        <hr>
+        <!-- <a mat-list-item routerLink='../nos-soins'>SOINS</a> -->
+        <!-- <hr> -->
+        <a mat-list-item routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/rdv-liste'>
+          Liste des rendez vous</a>
+        <hr>
+        <a mat-list-item routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/patients-list'>
+          Liste des patients</a>
+        <hr>
+        <a mat-list-item routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/mettre-a-jour'>
+          Mettre a jour un patient</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="white">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <!-- <mat-icon aria-label="Side nav toggle icon">format_align_left</mat-icon> -->
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+
+        </button>
+        <span style="margin: 0 auto; font-size: 12px;"><a routerLink=''
+          style="text-decoration: none; color: black;">
+          Administration</a></span>
+          <!-- <span>
+            <a routerLink=''
+          style="text-decoration: none; color: black;">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </a>
+          </span> -->
+        <!-- <span>Menu</span> -->
+
+      </mat-toolbar>
+      <!-- Add Content Here -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  </div>
+
+
+
+<div class="bheader">
+  <nav>
+    <div class="admin">
+      <a routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1'>
+        Retour au tableau bord </a>
+    </div>
+    <ul>
+     <div class="header">
+     <span class="spacer"></span>
+
+     <div class="links">
+        <li><a routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/patients-list'>Liste des patients</a></li>
+        <!-- <li><a routerLink='../f-patients'>Liste des fichiers patients</a></li> -->
+        <li><a routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/mettre-a-jour'>Mettre a jour un fichier patient</a></li>
+     </div>
+     </div>
+
+     <div class="header">
+      <span class="spacer"></span>
+      <div class="links">
+         <li><a routerLink='/a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/rdv-liste'>Liste des rendez-vous</a></li>
+      </div>
+
+      </div>
+    </ul>
+  </nav>
+ </div>

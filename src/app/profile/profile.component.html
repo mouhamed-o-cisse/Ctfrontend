@@ -1,44 +1,72 @@
 <app-nheader></app-nheader>
 
+<div class="whole">
+  <h1>Bienvenue sur votre dossier medical en ligne {{ details?.first_name }}</h1>
 
-<div class="container">
-  <div class="jumbotron mt-5">
-    <div class="col-sm-8 mx-auto">
-      <h1 class="text-center">PROFILE</h1>
-    </div>
-    <table class="table col-md-6 mx-auto">
-      <tr>
-        <td>Prénom(s)</td>
-        <td>{{ details?.first_name }}</td>
-      </tr>
-      <tr>
-        <td>Nom</td>
-        <td>{{ details?.last_name }}</td>
-      </tr>
-      <tr>
-        <td>Email</td>
-        <td>{{ details?.email }}</td>
-      </tr>
-      <tr>
-        <td>Numéro de téléphone</td>
-        <td>{{ details?.phone_number }}</td>
-      </tr>
-      <tr>
-        <td>Age</td>
-        <td>{{ details?.age }}</td>
-      </tr>
-      <tr>
-        <td>Maladie(s)</td>
-        <td>{{ details?.pdesease }}</td>
-      </tr>
-      <tr>
-        <td>Allergie(s)</td>
-        <td>{{ details?.allergy }}</td>
-      </tr>
-      <tr>
-        <td>Compte crée : </td>
-        <td>{{ details?.created }}</td>
-      </tr>
-    </table>
+  <div class="updated">
+    <h5>Mis a jour le : {{ details?.last_update | date: 'medium': undefined : 'fr' }}</h5>
   </div>
+  <div class="head">
+    <div class="informations">
+      <h3>{{ details?.first_name }} {{ details?.last_name }}</h3>
+      <div class="underh3">
+        <div class="info1">
+          <h4> Email : {{ details?.email }}</h4>
+          <h4> Age : {{ details?.age }}ans</h4>
+          <h4> Numero de telephone : {{ details?.phone_number }}</h4>
+        </div>
+        <div class="info2">
+          <h4> Allergie(s): {{ details?.allergy }}</h4>
+          <h4> Maladie(s) : {{ details?.pdesease }}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="nextrdv">
+      <h3>Prochain rendez-vous</h3>
+      <h4>{{ details?.pro_rdv }}</h4>
+    </div>
+  </div>
+
+  <div class="main">
+    <h1>Dossier medical</h1>
+    <div class="part1">
+      <div class="antecedents">
+        <h3>Antecedents personnels</h3>
+        <p>{{ details?.antecedents_personnels }}</p>
+        <hr>
+        <h3>Antecedents familiaux</h3>
+        <p>{{ details?.antecedents_familiaux }}</p>
+      </div>
+      <div class="motif">
+        <h3>Motif de consultation</h3>
+        <p>{{ details?.motif_de_consultation }}</p>
+      </div>
+    </div>
+    <div class="bilan">
+      <h3>Bilan</h3>
+      <p>{{ details?.bilan }}</p>
+    </div>
+    <div class="part3">
+      <div class="diagnostic">
+        <h3>Diagnostic</h3>
+        <p>{{ details?.diagnostic }}</p>
+      </div>
+      <div class="traitement_recu">
+        <h3>Traitement recu</h3>
+        <p>{{ details?.traitement_recu }}</p>
+      </div>
+      <div class="in">
+        <div class="ordonnance">
+          <h3>Ordonnance</h3>
+          <p>{{ details?.ordonnance }}</p>
+        </div>
+      </div>
+      <div class="evolution">
+        <h3>Evolution</h3>
+        <p>{{ details?.evolution }}</p>
+      </div>
+    </div>
+  </div>
+
 </div>
+

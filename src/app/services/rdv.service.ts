@@ -23,9 +23,9 @@ export class RdvService {
   };
 
    getRdvs() {
-    return this.httpClient.get<{}>('https://ctbackend.herokuapp.com/api/rdvs/get-rdvs').subscribe(
+    return this.httpClient.get<{}>('https://ctbackend2.herokuapp.com/rdvs/get-rdvs').subscribe(
       (rdvs: Rdv[]) => {
-        console.log(rdvs);
+        // console.log(rdvs);
         if (rdvs) {
           this.rdvs = rdvs;
           this.emitRdvs();
@@ -41,7 +41,7 @@ export class RdvService {
 
   addRdv(rdv: Rdv) {
         return new Promise((resolve, reject) => {
-          this.httpClient.post('https://ctbackend.herokuapp.com/api/rdvs/add-rdv', rdv).subscribe(
+          this.httpClient.post('https://ctbackend2.herokuapp.com/rdvs/new-rdv', rdv).subscribe(
             (response) => {
               resolve(response);
             },

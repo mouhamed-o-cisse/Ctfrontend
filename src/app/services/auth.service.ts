@@ -15,6 +15,16 @@ export interface UserDetails {
   pdesease: string
   allergy: string
   created: string
+  antecedents_personnels: string
+  antecedents_familiaux: string
+  motif_de_consultation: string
+  bilan: string
+  diagnostic: string
+  traitement_recu: string
+  ordonnance: string
+  evolution: string
+  pro_rdv: string
+  last_update: string
   exp: number
   iat: number
 }
@@ -39,7 +49,6 @@ export interface Admin {
   id: number
   username: string
   password: string
-
 }
 
 @Injectable()

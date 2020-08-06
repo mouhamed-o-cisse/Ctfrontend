@@ -28,7 +28,6 @@ export class SignupComponent implements OnInit {
 
   constructor(private auth: AuthService, private router: Router) {}
 
-  onSubmit() {}
 
   register() {
     this.auth.register(this.credentials).subscribe(

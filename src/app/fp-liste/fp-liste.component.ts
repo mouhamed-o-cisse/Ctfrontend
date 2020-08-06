@@ -10,7 +10,6 @@ import { AdminService } from '../services/admin.service';
 })
 export class FpListeComponent implements OnInit {
 
-
   patients: Patient[];
 
   patientSubscription: Subscription;
@@ -22,7 +21,8 @@ export class FpListeComponent implements OnInit {
     this.patientSubscription = this.adminService.patientSubject.subscribe(
       (patients: Patient[]) => {
         if(patients){ this.patients = patients;
-        console.log(patients);}
+        // console.log(patients);
+      }
 
         else{
 

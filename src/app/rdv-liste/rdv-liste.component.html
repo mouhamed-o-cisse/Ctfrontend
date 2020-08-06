@@ -1,7 +1,4 @@
-<div class="admin-link">
-  <a routerLink='../a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1'>
-    Retour à l'administration</a>
-</div>
+<app-aheader></app-aheader>
 
 <h1>Liste des rendez vous</h1>
 
@@ -15,9 +12,13 @@
 
     <h3> {{rdv.speciality}} </h3>
 
-    <p>pour le {{rdv.date}} </p>
+    <p>pour le {{rdv.date | date: 'fullDate': undefined : 'fr'}} </p>
 
     <p> Son numéro de téléphone est : {{rdv.phoneNumber}} </p>
+
+    <div class="took" *ngIf="rdv.took">
+      <p>pris le {{rdv.took | date: 'medium': undefined : 'fr' }} </p>
+    </div>
 
     <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Rendez vous confirmé</label> -->

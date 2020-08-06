@@ -22,7 +22,8 @@ export class RdvListeComponent implements OnInit {
     this.rdvSubscription = this.rdvService.rdvSubject.subscribe(
       (rdvs: Rdv[]) => {
         if(rdvs){ this.rdvs = rdvs;
-        console.log(rdvs);}
+        // console.log(rdvs);
+      }
 
         else{
 

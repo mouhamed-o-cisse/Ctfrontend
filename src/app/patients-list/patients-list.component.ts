@@ -11,6 +11,8 @@ import { AdminService } from '../services/admin.service';
 })
 export class PatientsListComponent implements OnInit {
 
+  nombreTotal = 0;
+
   patients: Patient[];
 
   patientSubscription: Subscription;
@@ -21,12 +23,13 @@ export class PatientsListComponent implements OnInit {
     this.adminService.getPatients();
     this.patientSubscription = this.adminService.patientSubject.subscribe(
       (patients: Patient[]) => {
-        if(patients){ this.patients = patients;
-        console.log(patients);}
-
-        else{
-
+        if(patients){
+          this.patients = patients;
+          // console.log(patients)
         }
+        this.nombreTotal = patients.length;
+
+        // else{}
       }
     );
     this.adminService.emitPatients();

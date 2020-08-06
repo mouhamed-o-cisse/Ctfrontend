@@ -1,0 +1,74 @@
+<app-aheader></app-aheader>
+
+<div class="whole">
+  <h1>Vous etes sur votre dossier medical de {{ detail?.first_name }} {{detail?.last_name}} </h1>
+  <!-- <h1><a routerLink="plist">Liste</a></h1> -->
+
+  <h3 style="text-align: center; margin: 20px 0;">Compte cree le : {{ detail?.created | date: 'medium': undefined : 'fr' }}</h3>
+
+  <div class="updated" *ngIf=" detail.last_update && detail.created !== detail.last_update">
+    <h3>Derniere mise a jour : {{ detail?.last_update | date: 'medium': undefined : 'fr' }}</h3>
+  </div>
+  <div class="head">
+    <div class="informations">
+      <h3> {{ detail?.first_name }} {{detail?.last_name}}</h3>
+      <div class="underh3">
+        <div class="info1">
+          <h4> Email : {{ detail?.email }}</h4>
+          <h4> Age : {{ detail?.age }}ans</h4>
+          <h4> Numero de telephone : {{ detail?.phone_number }}</h4>
+        </div>
+        <div class="info2">
+          <h4> Allergie(s): {{ detail?.allergy }}</h4>
+          <h4> Maladie(s) : {{ detail?.pdesease }}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="nextrdv">
+      <h3>Prochain rendez-vous</h3>
+      <h4>{{ detail?.pro_rdv }}</h4>
+    </div>
+  </div>
+
+  <div class="main">
+    <h1>Dossier medical</h1>
+    <div class="part1">
+      <div class="antecedents">
+        <h3>Antecedents personnels</h3>
+        <p>{{ detail?.antecedents_personnels }}</p>
+        <hr>
+        <h3>Antecedents familiaux</h3>
+        <p>{{ detail?.antecedents_familiaux }}</p>
+      </div>
+      <div class="motif">
+        <h3>Motif de consultation</h3>
+        <p>{{ detail?.motif_de_consultation }}</p>
+      </div>
+    </div>
+    <div class="bilan">
+      <h3>Bilan</h3>
+      <p>{{ detail?.bilan }}</p>
+    </div>
+    <div class="part3">
+      <div class="diagnostic">
+        <h3>Diagnostic</h3>
+        <p>{{ detail?.diagnostic }}</p>
+      </div>
+      <div class="traitement_recu">
+        <h3>Traitement recu</h3>
+        <p>{{ detail?.traitement_recu }}</p>
+      </div>
+      <div class="in">
+        <div class="ordonnance">
+          <h3>Ordonnance</h3>
+          <p>{{ detail?.ordonnance }}</p>
+        </div>
+      </div>
+      <div class="evolution">
+        <h3>Evolution</h3>
+        <p>{{ detail?.evolution }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

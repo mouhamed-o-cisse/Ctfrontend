@@ -15,6 +15,13 @@ import { MustMatchDirective } from './helpers/must-match.directives';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatMenuModule } from '@angular/material/menu';
+import { registerLocaleData } from '@angular/common';
+// For the date to be in french THERE IS SOMETHING IN PROVIDERS TOO
+import localeFr from '@angular/common/locales/fr';
+// the second parameter 'fr' is optional
+registerLocaleData(localeFr, 'fr');
+import { LOCALE_ID } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +55,10 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { FpListeComponent } from './fp-liste/fp-liste.component';
+import { UpdateFpComponent } from './update-fp/update-fp.component';
+import { ListeComponent } from './liste/liste.component';
+import { AheaderComponent } from './aheader/aheader.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 const appRoutes : Routes =[
@@ -70,11 +81,20 @@ const appRoutes : Routes =[
     path:'rendez-vous', component: RendezVousComponent
   },
   {
-    path:'rdv-liste', component: RdvListeComponent
+    path:'a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/rdv-liste', component: RdvListeComponent
   },
   {
     path:'login', component: LoginComponent
   },
+  {
+    path:'liste', component: ListeComponent
+  },
+  {
+    path:'a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/patients-list/user-details/:id', component: UserDetailsComponent
+  },
+  // {
+  //   path:'patients-list/user/add/:id', component: UserDetailsComponent
+  // },
   {
     path:'signup', component: SignupComponent
   },
@@ -89,7 +109,13 @@ const appRoutes : Routes =[
     // , canActivateChild:[AuthGuardService]
   },
   {
-    path:'patients-list', component: PatientsListComponent
+    path:'a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/patients-list', component: PatientsListComponent
+  },
+  {
+    path:'a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/mettre-a-jour', component: UpdateFpComponent
+  },
+  {
+    path:'a1dm0i1n00i1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1a1dm0i1n00i1343244r1a1t1isdcfsen1edm3i1n1i1s1t1r9a1t1iaksbx2jj12kjb33j4ni1s1t4r1a1t1i1o1n1edm3i1n1i1s1t1r9a1t1i6o1n1/patients-list/user-details/mettre-a-jour', component: UpdateFpComponent
   },
   {
     path:'f-patients', component: FpListeComponent
@@ -100,7 +126,7 @@ const appRoutes : Routes =[
   {
     path:'footer', component: FooterComponent
   },
-  ///////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   {
     path: '', component: AccueilComponent
   },
@@ -136,7 +162,11 @@ const appRoutes : Routes =[
     SignupComponent,
     ProfileComponent,
     AdminloginComponent,
-    FpListeComponent
+    FpListeComponent,
+    UpdateFpComponent,
+    ListeComponent,
+    AheaderComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -154,6 +184,7 @@ const appRoutes : Routes =[
     MatCardModule,
     MatProgressSpinnerModule,
     MatIconModule,
+    MatMenuModule,
     MatExpansionModule,
     AgmCoreModule.forRoot({
       // clientId:''
@@ -169,7 +200,10 @@ const appRoutes : Routes =[
     MatSidenavModule,
     MatListModule
   ],
-  providers: [RdvService, AuthGuardService, AuthService, AdminService],
+  providers: [RdvService, AuthGuardService, AuthService, AdminService,
+    // IN ORDER TO DISPLLAY THE DATE IN FRENCH
+    {provide: LOCALE_ID, useValue: 'fr' }
+  ],
 
   bootstrap: [AppComponent]
 })
