@@ -1,152 +1,3 @@
-// h1{
-//   margin-top:20px ;
-// text-align: center;
-// }
-// .updated{
-// text-align: end;
-// }
-
-// .head{
-//   margin: 0 auto;
-//   width: 90%;
-//   display: flex;
-//   .informations{
-//     padding: 20px;
-//     width: 80%;
-//     background-color: white;
-//     border-radius: 16px;
-//     h3{
-//       text-align: center;
-//     }
-//     .underh3{
-//       width: 90%;
-//       margin: 0 auto;
-//       display: grid;
-//       grid-template-columns: 1fr 1fr;
-//       .info1{
-//         width: 100%;
-//         h4{}
-//       }
-//       .info2{
-//         width: 100%;
-//         h4{}
-//       }
-//     }
-//   }
-//   .nextrdv{
-//     border-radius: 16px;
-//     padding: 20px;
-//     background-color: white;
-//     margin-left: 20px;
-//     width: 20%;
-//     h3{
-//       text-align: center;
-//     }
-//     h4{
-//       text-align: center;
-//     }
-//   }
-// }
-
-// .main{
-//   h1{
-//     text-align: center;
-//   }
-//   .part1{
-//     margin: 0 auto;
-//     width: 90%;
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     .antecedents{
-//       padding: 20px;
-//       margin: 0 auto;
-//       background-color: white;
-//       border-radius: 16px;
-//       width: 90%;
-//       hr{
-//         width: 70%;
-//       }
-//       h3{
-//         text-align: center;
-//       }
-//       p{}
-//     }
-//     .motif{
-//       padding: 20px;
-//       margin: 0 auto;
-//       background-color: white;
-//       border-radius: 16px;
-//       width: 90%;
-//       h3{
-//         text-align: center;
-//       }
-//       p{}
-//     }
-//   }
-//   .bilan{
-//     padding: 20px;
-//     margin: 50px auto;
-//     border-radius: 16px;
-//     width: 80%;
-//     background-color: white;
-//     h3{
-//       text-align: center;
-//     }
-//     p{}
-//   }
-//   .part3{
-//     background-color: none;
-//     margin: 0 auto;
-//     width: 90%;
-//     // display: grid;
-//     // grid-template-columns: 1fr 1fr;
-//     grid-row-gap: 20px;
-//     .diagnostic{
-//       padding: 10px;
-//       width: 40%;
-//       background-color: white;
-//       border-radius:16px ;
-//       h3{
-//         text-align: center;
-//       }
-//     }
-//     .traitement_recu{
-//       margin: 20px auto;
-//       padding: 10px;
-//       width: 90%;
-//       background-color: white;
-//       border-radius:16px ;
-//       h3{
-//         text-align: center;
-//       }
-//     }
-//     .in{
-//       display: flex;
-//       justify-content: flex-end;
-//       .ordonnance{
-//         padding: 10px;
-//         width: 40%;
-//         background-color: white;
-//         border-radius:16px ;
-//         h3{
-//           text-align: center;
-//         }
-//       }
-//     }
-//     .evolution{
-//       margin: 20px auto;
-//       padding: 10px;
-//       width: 90%;
-//       background-color: white;
-//       border-radius:16px ;
-//       h3{
-//         text-align: center;
-//       }
-//     }
-//   }
-// }
-
-
 .whole{
   h1{
     margin-top:20px ;
@@ -235,7 +86,7 @@
     }
     .bilan{
       padding: 20px;
-      margin: 50px auto;
+      margin: 30px auto;
       border-radius: 16px;
       width: 80%;
       background-color: white;
@@ -306,311 +157,39 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .whole{
-    h1{
-      margin-top:20px ;
-    text-align: center;
-    }
-    .updated{
-    text-align: center;
-    }
 
-    .head{
-      margin: 0 auto;
-      width: 90%;
-      display: flex;
-      .informations{
-        margin: 0 auto;
-        padding: 20px;
-        width: 90%;
-        background-color: white;
-        border-radius: 16px;
-        h3{
-          text-align: center;
-        }
-        .underh3{
-          width: 90%;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          .info1{
-            width: 100%;
-            // h4{}
-          }
-          .info2{
-            width: 100%;
-            // h4{}
-          }
-        }
-      }
-      //
-      .nextrdv{
-            border-radius: 16px;
-            padding: 20px;
-            background-color: white;
-            margin-left: 20px;
-            width: 20%;
-            h3{
-              text-align: center;
-            }
-            h4{
-              text-align: center;
-            }
-          }
-        }
-
-
-    .main{
-      h1{
-        text-align: center;
-      }
-      .part1{
-        margin: 0 auto;
-        width: 90%;
-        display: grid;
-        grid-template-columns: 1fr;
-        .antecedents{
-          padding: 20px;
-          margin: 20px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          hr{
-            width: 70%;
-          }
-          h3{
-            text-align: center;
-          }
-          // p{}
-        }
-        .motif{
-          padding: 20px;
-          margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          h3{
-            text-align: center;
-          }
-          // p{}
-        }
-      }
-      .bilan{
-        padding: 20px;
-        margin: 50px auto;
-        border-radius: 16px;
-        width: 80%;
-        background-color: white;
-        h3{
-          text-align: center;
-        }
-        // p{}
-      }
-      .part3{
-        background-color: none;
-        margin: 15px auto;
-        width: 90%;
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-row-gap: 20px;
-        .diagnostic{
-          padding: 10px;
-          width: 85%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
-        }
-        .traitement_recu{
-          margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
-        }
-        .in{
-          display: flex;
-          justify-content: flex-end;
-          .ordonnance{
-            padding: 10px;
-            width: 85%;
-            background-color: white;
-            border-radius:16px ;
-            h3{
-              text-align: center;
-            }
-          }
-        }
-        .evolution{
-          margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
-        }
-      }
-    }
-  }
 
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024.5px) {
   .whole{
-    h1{
-      margin-top:20px ;
-    text-align: center;
-    }
-    .updated{
-    text-align: center;
-    }
-
-    .head{
-      margin: 0 auto;
-      width: 90%;
-      display: block;
-      .informations{
-        margin: 0 auto;
-        padding: 20px;
-        width: 90%;
-        background-color: white;
-        border-radius: 16px;
-        h3{
-          text-align: center;
-        }
-        .underh3{
-          width: 90%;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          .info1{
-            width: 100%;
-            // h4{}
-          }
-          .info2{
-            width: 100%;
-            // h4{}
-          }
-        }
-      }
-      .nextrdv{
-        border-radius: 16px;
-        padding: 20px;
-        background-color: white;
-        margin: 20px auto;
-        width: 40%;
-        h3{
-          text-align: center;
-        }
-        h4{
-          text-align: center;
-        }
-      }
-    }
 
     .main{
-      h1{
-        text-align: center;
-      }
       .part1{
-        margin: 0 auto;
-        width: 90%;
-        display: grid;
         grid-template-columns: 1fr;
-        .antecedents{
-          padding: 20px;
-          margin: 20px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          hr{
-            width: 70%;
-          }
-          h3{
-            text-align: center;
-          }
-          // p{}
-        }
         .motif{
-          padding: 20px;
           margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          h3{
-            text-align: center;
-          }
-          // p{}
         }
-      }
-      .bilan{
-        padding: 20px;
-        margin: 50px auto;
-        border-radius: 16px;
-        width: 80%;
-        background-color: white;
-        h3{
-          text-align: center;
-        }
-        // p{}
       }
       .part3{
-        background-color: none;
-        margin: 15px auto;
-        width: 90%;
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-row-gap: 20px;
+
         .diagnostic{
-          padding: 10px;
+
           width: 85%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
+
         }
-        .traitement_recu{
-          margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
-        }
+
         .in{
-          display: flex;
-          justify-content: flex-end;
+
           .ordonnance{
-            padding: 10px;
+
             width: 85%;
-            background-color: white;
-            border-radius:16px ;
-            h3{
-              text-align: center;
-            }
+
           }
         }
-        .evolution{
-          margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
-        }
+
       }
     }
   }
@@ -623,150 +202,56 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   .whole{
-    h1{
-      margin-top:20px ;
-    text-align: center;
-    }
-    .updated{
-    text-align: center;
-    }
 
     .head{
-      margin: 0 auto;
-      width: 90%;
+
       display: block;
       .informations{
-        margin: 0 auto;
-        padding: 20px;
-        width: 80%;
-        background-color: white;
-        border-radius: 16px;
-        h3{
-          text-align: center;
-        }
+
         .underh3{
-          width: 90%;
-          margin: 0 auto;
-          display: grid;
+
           grid-template-columns: 1fr ;
-          .info1{
-            width: 100%;
-            // h4{}
-          }
-          .info2{
-            width: 100%;
-            // h4{}
-          }
+
         }
       }
       .nextrdv{
-        border-radius: 16px;
-        padding: 20px;
-        background-color: white;
+
         margin: 20px auto;
         width: 80%;
-        h3{
-          text-align: center;
-        }
-        h4{
-          text-align: center;
-        }
+
       }
     }
 
     .main{
-      h1{
-        text-align: center;
-      }
+
       .part1{
-        margin: 0 auto;
-        width: 90%;
-        display: grid;
+
         grid-template-columns: 1fr;
         .antecedents{
-          padding: 20px;
+
           margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          hr{
-            width: 70%;
-          }
-          h3{
-            text-align: center;
-          }
-          // p{}
+
         }
         .motif{
-          padding: 20px;
+
           margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          h3{
-            text-align: center;
-          }
-          // p{}
         }
       }
-      .bilan{
-        padding: 20px;
-        margin: 50px auto;
-        border-radius: 16px;
-        width: 80%;
-        background-color: white;
-        h3{
-          text-align: center;
-        }
-        // p{}
-      }
+
       .part3{
-        background-color: none;
-        margin: 0 auto;
-        width: 90%;
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-row-gap: 20px;
+
         .diagnostic{
-          padding: 10px;
+
           width: 85%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
+
         }
-        .traitement_recu{
-          margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
-        }
+
         .in{
-          display: flex;
-          justify-content: flex-end;
+
           .ordonnance{
-            padding: 10px;
+
             width: 85%;
-            background-color: white;
-            border-radius:16px ;
-            h3{
-              text-align: center;
-            }
-          }
-        }
-        .evolution{
-          margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
+
           }
         }
       }
@@ -778,157 +263,65 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   .whole{
-    h1{
-      margin-top:20px ;
-    text-align: center;
-    }
-    .updated{
-    text-align: center;
-    }
-
     .head{
-      margin: 0 auto;
-      width: 90%;
       display: block;
       .informations{
         margin: 0 auto;
-        padding: 20px;
-        width: 80%;
-        background-color: white;
-        border-radius: 16px;
-        h3{
-          text-align: center;
-
-        }
         .underh3{
-          width: 90%;
-          margin: 0 auto;
-          display: grid;
+
           grid-template-columns: 1fr ;
-          .info1{
-            width: 100%;
-            h4{
-              font-size: 12px;
-            }
-          }
-          .info2{
-            width: 100%;
-            h4{
-              font-size: 12px;
-            }
-          }
+
         }
       }
       .nextrdv{
-        border-radius: 16px;
-        padding: 20px;
-        background-color: white;
+
         margin: 20px auto;
-        width: 80%;
-        h3{
-          text-align: center;
-        }
-        h4{
-          text-align: center;
-        }
+        width: 70%;
+
       }
     }
 
     .main{
-      h1{
-        text-align: center;
-      }
+
       .part1{
         margin: 0 auto;
-        width: 90%;
+
         display: grid;
         grid-template-columns: 1fr;
         .antecedents{
-          padding: 20px;
+
           margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          hr{
-            width: 70%;
-          }
-          h3{
-            text-align: center;
-          }
-          // p{}
+
         }
-        .motif{
-          padding: 20px;
+
           margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          h3{
-            text-align: center;
-          }
-          // p{}
-        }
+
       }
       .bilan{
-        padding: 20px;
-        margin: 50px auto;
-        border-radius: 16px;
-        width: 80%;
-        background-color: white;
-        h3{
-          text-align: center;
-        }
-        // p{}
+
+        margin: 30px auto;
+
       }
       .part3{
-        background-color: none;
-        margin: 0 auto;
-        width: 90%;
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-row-gap: 20px;
+
         .diagnostic{
-          padding: 10px;
+
           width: 80%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
+
         }
         .traitement_recu{
           margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
+
         }
         .in{
-          display: flex;
-          justify-content: flex-end;
+
           .ordonnance{
-            padding: 10px;
+
             width: 80%;
-            background-color: white;
-            border-radius:16px ;
-            h3{
-              text-align: center;
-            }
+
           }
         }
-        .evolution{
-          margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
-        }
+
       }
     }
   }
@@ -939,32 +332,15 @@
 @media (max-width: 320px) {
 
   .whole{
-    h1{
-      margin-top:20px ;
-    text-align: center;
-    }
-    .updated{
-    text-align: center;
-    }
-
     .head{
-      margin: 0 auto;
-      width: 90%;
+
       display: block;
       .informations{
         margin: 0 auto;
-        padding: 20px;
-        width: 80%;
-        background-color: white;
-        border-radius: 16px;
-        h3{
-          text-align: center;
-          width: 95%;
-        }
+
         .underh3{
           width: 90%;
-          margin: 0 auto;
-          display: grid;
+
           grid-template-columns: 1fr ;
           .info1{
             width: 100%;
@@ -981,114 +357,59 @@
         }
       }
       .nextrdv{
-        border-radius: 16px;
-        padding: 20px;
-        background-color: white;
+
         margin: 20px auto;
         width: 80%;
-        h3{
-          text-align: center;
-        }
-        h4{
-          text-align: center;
-        }
+
       }
     }
 
     .main{
-      h1{
-        text-align: center;
-      }
+
       .part1{
-        margin: 0 auto;
-        width: 90%;
-        display: grid;
+
         grid-template-columns: 1fr;
         .antecedents{
-          padding: 20px;
+
           margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
-          width: 90%;
-          hr{
-            width: 70%;
-          }
-          h3{
-            text-align: center;
-          }
-          // p{}
+
         }
         .motif{
-          padding: 20px;
+
           margin: 15px auto;
-          background-color: white;
-          border-radius: 16px;
+
           width: 90%;
-          h3{
-            text-align: center;
-          }
-          // p{}
+
         }
       }
       .bilan{
-        padding: 20px;
-        margin: 50px auto;
-        border-radius: 16px;
-        width: 80%;
-        background-color: white;
-        h3{
-          text-align: center;
-        }
-        // p{}
+
+        margin: 30px auto;
+
       }
       .part3{
-        background-color: none;
+
         margin: 0 auto;
-        width: 90%;
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-row-gap: 20px;
+
         .diagnostic{
-          padding: 10px;
+
           width: 70%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
+
         }
         .traitement_recu{
           margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
+
         }
         .in{
-          display: flex;
-          justify-content: flex-end;
+
           .ordonnance{
-            padding: 10px;
+
             width: 80%;
-            background-color: white;
-            border-radius:16px ;
-            h3{
-              text-align: center;
-            }
+
           }
         }
         .evolution{
           margin: 20px auto;
-          padding: 10px;
-          width: 90%;
-          background-color: white;
-          border-radius:16px ;
-          h3{
-            text-align: center;
-          }
         }
       }
     }
