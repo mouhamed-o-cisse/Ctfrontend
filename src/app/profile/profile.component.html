@@ -3,7 +3,7 @@
 <div class="whole">
   <h1>Bienvenue sur votre dossier medical en ligne {{ details?.first_name }}</h1>
 
-  <div class="updated">
+  <div class="updated" *ngIf="details?.last_update">
     <h5>Mis a jour le : {{ details?.last_update | date: 'medium': undefined : 'fr' }}</h5>
   </div>
   <div class="head">
